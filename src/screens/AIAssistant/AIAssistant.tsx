@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useSearchParams, useNavigate } from 'react-router-dom'
+import { UpgradeProModal } from '../../components/UpgradeProModal/UpgradeProModal'
 import './AIAssistant.css'
 
 /** Sample chart data: Unique Count User Id by Weekly Date Created (increasing trend) */
@@ -47,6 +48,8 @@ export function AIAssistant() {
   const [newQuestion, setNewQuestion] = useState('')
   const [chartView, setChartView] = useState<'line' | 'table'>('line')
   const [feedback, setFeedback] = useState<'up' | 'down' | null>(null)
+  const [upgradeBannerDismissed, setUpgradeBannerDismissed] = useState(false)
+  const [upgradeModalOpen, setUpgradeModalOpen] = useState(false)
 
   const handleSend = () => {
     if (!newQuestion.trim()) return
@@ -120,6 +123,38 @@ export function AIAssistant() {
           </button>
         </div>
       </header>
+
+      {!upgradeBannerDismissed && (
+        <div className="ai-assistant__upgrade-banner" role="alert">
+          <div className="ai-assistant__upgrade-banner-icon" aria-hidden>
+            <span>!</span>
+          </div>
+          <p className="ai-assistant__upgrade-banner-text">
+            Upgrade to a pro version, since you have reached the maximum limit of free AI prompts.
+          </p>
+          <button
+            type="button"
+            className="ai-assistant__upgrade-banner-btn"
+            onClick={() => setUpgradeModalOpen(true)}
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+              <circle cx="12" cy="7" r="4" />
+            </svg>
+            Upgrade Now
+          </button>
+          <button
+            type="button"
+            className="ai-assistant__upgrade-banner-close"
+            onClick={() => setUpgradeBannerDismissed(true)}
+            aria-label="Dismiss notification"
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M18 6L6 18M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+      )}
 
       <div className="ai-assistant__conversation">
         {/* User message */}
@@ -340,6 +375,12 @@ export function AIAssistant() {
           <a href="#">Learn more</a>
         </p>
       </footer>
+
+      <UpgradeProModal
+        isOpen={upgradeModalOpen}
+        onClose={() => setUpgradeModalOpen(false)}
+        onInterested={() => setUpgradeModalOpen(false)}
+      />
     </div>
   )
 }
