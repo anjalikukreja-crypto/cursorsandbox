@@ -137,10 +137,6 @@ export function AIAssistant() {
             className="ai-assistant__upgrade-banner-btn"
             onClick={() => setUpgradeModalOpen(true)}
           >
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
-              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
-              <circle cx="12" cy="7" r="4" />
-            </svg>
             Upgrade Now
           </button>
           <button
@@ -380,6 +376,8 @@ export function AIAssistant() {
         isOpen={upgradeModalOpen}
         onClose={() => setUpgradeModalOpen(false)}
         onInterested={() => setUpgradeModalOpen(false)}
+        title="Upgrade to get full access to our intelligent AI assistant"
+        bodyText="Upgrade to Eltropy Pro for unlimited AI prompts and full access to our intelligent AI assistant. Get in touch with your Eltropy account manager to discover how Pro can help you."
       />
     </div>
   )

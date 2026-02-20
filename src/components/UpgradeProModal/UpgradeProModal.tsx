@@ -4,12 +4,22 @@ interface UpgradeProModalProps {
   isOpen: boolean
   onClose: () => void
   onInterested?: () => void
+  /** Optional custom title. Default: "Unlock custom reports & dashboards" */
+  title?: string
+  /** Optional custom body text. Default: standard Pro upgrade message */
+  bodyText?: string
 }
+
+const DEFAULT_TITLE = 'Unlock custom reports & dashboards'
+const DEFAULT_BODY =
+  'Upgrade to Eltropy Pro to create custom reports and dashboards tailored to your needs. Get in touch with your Eltropy account manager to discover how Pro can help you make better, data-driven decisions.'
 
 export function UpgradeProModal({
   isOpen,
   onClose,
   onInterested,
+  title = DEFAULT_TITLE,
+  bodyText = DEFAULT_BODY,
 }: UpgradeProModalProps) {
   const handleInterested = () => {
     onInterested?.()
@@ -38,11 +48,10 @@ export function UpgradeProModal({
           </svg>
         </div>
         <h2 id="upgrade-pro-modal-title" className="upgrade-pro-modal__title">
-          Unlock custom reports & dashboards
+          {title}
         </h2>
         <p className="upgrade-pro-modal__text">
-          Upgrade to Eltropy Pro to create custom reports and dashboards tailored to your needs. 
-          Get in touch with your Eltropy account manager to discover how Pro can help you make better, data-driven decisions.
+          {bodyText}
         </p>
         <div className="upgrade-pro-modal__actions">
           <button
