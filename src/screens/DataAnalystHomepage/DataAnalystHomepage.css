@@ -1,0 +1,32 @@
+.data-analyst-homepage {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-48);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.homepage__dashboards-header-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-16);
+}
+
+.data-analyst-homepage__data-warehouse-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-8) var(--space-16);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--white);
+  background: var(--blue-400);
+  border: none;
+  border-radius: var(--radius-8);
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.data-analyst-homepage__data-warehouse-btn:hover {
+  background: var(--blue-300);
+}

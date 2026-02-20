@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Card Preview</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      /* Eltropy Radiant design tokens */
+      --white: #FFFFFF;
+      --gray-50: #F7F7F8;
+      --gray-100: #EEEEF0;
+      --gray-200: #D9D9DE;
+      --gray-600: #5E5E6B;
+      --navyGray-700: #11304F;
+      --green-400: #004D40;
+      --green-300: #00695C;
+      --blue-200: #4541FE;
+      --blue-200-rgb: 69, 65, 254;
+      --text-heading: var(--navyGray-700);
+      --text-subtext: var(--gray-600);
+      --outline-border: var(--gray-200);
+      --bg-neutral: #F4F6F8;
+      --space-12: 12px;
+      --space-16: 16px;
+      --space-20: 20px;
+      --space-48: 48px;
+      --radius-8: 8px;
+      --radius-12: 12px;
+      --shadow-hover: 0 2px 8px rgba(var(--blue-200-rgb), 0.08);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      min-height: 100vh;
+      background: var(--bg-neutral);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: var(--space-48);
+    }
+    .radiant-card {
+      background: var(--white);
+      border: 1px solid var(--outline-border);
+      border-radius: var(--radius-12);
+      padding: var(--space-20);
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-16);
+      max-width: 400px;
+    }
+    .radiant-card__heading {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--text-heading);
+      line-height: 1.3;
+    }
+    .radiant-card__subtext {
+      font-size: 14px;
+      color: var(--text-subtext);
+      line-height: 1.5;
+    }
+    .radiant-card__button {
+      align-self: flex-start;
+      padding: var(--space-12) var(--space-20);
+      border: none;
+      border-radius: var(--radius-8);
+      background: var(--green-400);
+      color: var(--white);
+      font-size: 14px;
+      font-weight: 500;
+      font-family: inherit;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .radiant-card__button:hover {
+      background: var(--green-300);
+    }
+  </style>
+</head>
+<body>
+  <article class="radiant-card">
+    <h3 class="radiant-card__heading">Welcome</h3>
+    <p class="radiant-card__subtext">Get started with our platform in just a few steps.</p>
+    <button type="button" class="radiant-card__button" onclick="alert('Get Started clicked!')">Get Started</button>
+  </article>
+</body>
+</html>

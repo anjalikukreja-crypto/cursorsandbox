@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Eltropy Radiant — Base Colors */
+  --green-50: #E0F2F1;
+  --green-100: #B2DFDB;
+  --green-200: #00796B;
+  --green-300: #00695C;
+  --green-400: #004D40;
+  --blue-50: #EBF2FF;
+  --blue-100: #BECFFF;
+  --blue-200: #4541FE;
+  --blue-300: #2921E1;
+  --blue-400: #221EB5;
+  --gray-50: #F7F7F8;
+  --gray-100: #EEEEF0;
+  --gray-200: #D9D9DE;
+  --gray-300: #B9BAC0;
+  --gray-400: #92939E;
+  --gray-500: #757682;
+  --gray-600: #5E5E6B;
+  --navyGray-700: #11304F;
+  --red-50: #FAF0F1;
+  --red-200: #DB3127;
+  --successGreen-50: #F6FEFA;
+  --successGreen-300: #04855D;
+  --white: #FFFFFF;
+
+  /* RGB values for rgba() usage */
+  --blue-200-rgb: 69, 65, 254;
+
+  /* Semantic */
+  --text-heading: var(--navyGray-700);
+  --text-subtext: var(--gray-600);
+  --text-placeholder: var(--gray-400);
+  --text-error: var(--red-200);
+  --bg-neutral: #F4F6F8;
+  --bg-hover: var(--gray-50);
+  --bg-disabled: var(--gray-200);
+  --outline-border: var(--gray-200);
+  --outline-focused: #7088A8;
+
+  /* Spacing */
+  --space-4: 4px;
+  --space-8: 8px;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-20: 20px;
+  --space-24: 24px;
+  --space-32: 32px;
+  --space-40: 40px;
+  --space-48: 48px;
+  --space-64: 64px;
+
+  /* Radius */
+  --radius-4: 4px;
+  --radius-8: 8px;
+  --radius-12: 12px;
+
+  /* Shadows */
+  --shadow-hover: 0 2px 8px rgba(var(--blue-200-rgb), 0.08);
+  --shadow-hover-strong: 0 4px 20px rgba(var(--blue-200-rgb), 0.12);
+
+  /* Sidebar (Eltropy Radiant dark nav - Navbar Violet) */
+  --sidebar-bg: linear-gradient(135deg, #0A0532 0%, #2D2759 100%);
+  --sidebar-active-bg: rgba(69, 65, 254, 0.2);
+  --sidebar-text: rgba(255, 255, 255, 0.9);
+  --sidebar-text-muted: rgba(255, 255, 255, 0.7);
+  --sidebar-badge: #F97316;
+}
+
+body {
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--text-heading);
+  background-color: #ffffff;
+  min-width: 320px;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: var(--blue-200);
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: var(--blue-300);
+}

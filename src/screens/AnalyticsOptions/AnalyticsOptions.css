@@ -1,0 +1,110 @@
+.analytics-options {
+  min-height: 100vh;
+  padding: var(--space-48) var(--space-24);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.analytics-options__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: var(--space-48);
+}
+
+.analytics-options__illustration {
+  width: 360px;
+  height: auto;
+  margin-bottom: var(--space-16);
+}
+
+.analytics-options__heading {
+  font-size: clamp(28px, 4vw, 36px);
+  font-weight: 700;
+  color: var(--text-heading);
+  text-align: center;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.analytics-options__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-24);
+  align-items: start;
+}
+
+@media (max-width: 768px) {
+  .analytics-options__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.analytics-options__phase-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+}
+
+.analytics-options__card--parent {
+  position: relative;
+  padding-right: 48px;
+}
+
+.analytics-options__card--parent .analytics-options__title {
+  margin: 0;
+}
+
+.analytics-options__chevron {
+  position: absolute;
+  right: var(--space-20);
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  color: var(--text-subtext);
+  transition: transform 0.2s ease;
+}
+
+.analytics-options__chevron--open {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.analytics-options__sub-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+  padding-left: var(--space-24);
+  border-left: 2px solid var(--outline-border);
+  margin-left: var(--space-12);
+}
+
+.analytics-options__card--sub {
+  min-height: 80px;
+}
+
+.analytics-options__card {
+  background: var(--white);
+  border: 1px solid var(--outline-border);
+  border-radius: var(--radius-12);
+  max-width: 360px;
+  width: 100%;
+  cursor: pointer;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 120px;
+}
+
+.analytics-options__card:hover {
+  border-color: var(--blue-200);
+  box-shadow: var(--shadow-hover-strong);
+}
+
+.analytics-options__title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-heading);
+  padding: var(--space-20);
+  margin: 0;
+}

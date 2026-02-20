@@ -1,0 +1,87 @@
+.data-warehouse {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 400px;
+  padding: var(--space-48) var(--space-24);
+  background: var(--white);
+}
+
+.data-warehouse__stepper {
+  display: flex;
+  align-items: flex-start;
+  gap: 0;
+  width: 100%;
+  max-width: 720px;
+}
+
+.data-warehouse__step {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  min-width: 0;
+}
+
+
+.data-warehouse__step-trigger {
+  display: flex;
+  align-items: center;
+  gap: var(--space-12);
+  padding: var(--space-8) 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  text-align: left;
+}
+
+.data-warehouse__step-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 50%;
+  background: var(--gray-200);
+  color: var(--gray-600);
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.data-warehouse__step--active .data-warehouse__step-number {
+  background: var(--blue-400);
+  color: var(--white);
+}
+
+.data-warehouse__step--completed .data-warehouse__step-number {
+  background: var(--blue-200);
+  color: var(--white);
+}
+
+.data-warehouse__step-label {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--gray-500);
+  transition: color 0.15s ease, font-weight 0.15s ease;
+}
+
+.data-warehouse__step--active .data-warehouse__step-label {
+  font-weight: 600;
+  color: var(--blue-400);
+}
+
+.data-warehouse__step--completed .data-warehouse__step-label {
+  color: var(--gray-600);
+}
+
+.data-warehouse__step-connector {
+  flex: 1;
+  min-width: 24px;
+  height: 2px;
+  margin: 0 var(--space-12);
+  margin-top: 13px;
+  align-self: flex-start;
+  background: var(--gray-200);
+}

@@ -1,0 +1,30 @@
+.radiant-card {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-12);
+  padding: var(--space-20);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+  min-width: 0;
+  max-width: 400px;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.radiant-card:hover {
+  border-color: var(--blue-200);
+  box-shadow: 0 2px 8px rgba(69, 65, 254, 0.08);
+}
+
+.radiant-card__heading {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--navyGray-700);
+  line-height: 1.3;
+}
+
+.radiant-card__subtext {
+  font-size: 14px;
+  color: var(--gray-600);
+  line-height: 1.5;
+}

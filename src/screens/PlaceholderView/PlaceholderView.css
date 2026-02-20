@@ -1,0 +1,9 @@
+.placeholder-view {
+  padding: var(--space-48);
+  text-align: center;
+}
+
+.placeholder-view__text {
+  font-size: 16px;
+  color: var(--text-subtext);
+}
