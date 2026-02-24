@@ -12,7 +12,6 @@ const phaseOptions = [
       { id: 'executives', path: '/homepage', title: 'Executives' },
       { id: 'managers', path: '/managers', title: 'Managers' },
       { id: 'data-analysts', path: '/data-analysts', title: 'Data analysts' },
-      { id: 'contact-center-agents', path: '/conversations', title: 'Contact center agents' },
     ],
   },
 ]

@@ -35,9 +35,9 @@ function App() {
         <Route path="ai-intelligence" element={<PlaceholderView />} />
         <Route path="conversations" element={<Conversations />} />
         <Route path="conversations/member-inbox" element={<Conversations />} />
-        <Route path="conversations/interaction-list" element={<Conversations />} />
-        <Route path="conversations/back-office" element={<Conversations />} />
-        <Route path="conversations/live-dashboard" element={<Conversations />} />
+        <Route path="conversations/interaction-list" element={<PlaceholderView />} />
+        <Route path="conversations/back-office" element={<PlaceholderView />} />
+        <Route path="conversations/live-dashboard" element={<PlaceholderView />} />
         <Route path="conversations/video-notary-journal" element={<PlaceholderView />} />
         <Route path="branch-operations" element={<PlaceholderView />} />
         <Route path="branch-operations/appointments" element={<PlaceholderView />} />

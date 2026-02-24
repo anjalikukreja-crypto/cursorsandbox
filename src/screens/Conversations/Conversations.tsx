@@ -121,14 +121,31 @@ export function Conversations() {
                 </svg>
               </span>
               <div>
-                <div className="conv-main__name">{selected?.name ?? 'sahilll'}</div>
-                <div className="conv-main__id">chudegbfcuydegbcuyebgduybheudihcbnuiedbhiudebhnuivchbrefdiushfcbn</div>
-                <div className="conv-main__phone">+1 983-918-8565</div>
+                <div className="conv-main__name-row">
+                  <span className="conv-main__name">{selected?.name ?? 'Sarah Johnson'}</span>
+                  <button type="button" className="conv-main__name-icon-btn" aria-label="Edit name">✎</button>
+                  <button type="button" className="conv-main__name-icon-btn" aria-label="Refresh">↻</button>
+                </div>
+                <div className="conv-main__phone">+1 (123) 456 78 90</div>
               </div>
             </div>
             <div className="conv-main__header-actions">
-              <button type="button" className="conv-main__icon-btn" aria-label="Edit">✎</button>
-              <button type="button" className="conv-main__icon-btn" aria-label="Copy">⎘</button>
+              <button type="button" className="conv-main__assignee">
+                <span className="conv-main__assignee-avatar">AR</span>
+                <span className="conv-main__assignee-name">Andrew Raynold</span>
+                <span className="conv-main__assignee-chevron">▾</span>
+              </button>
+              <button type="button" className="conv-main__status-btn">
+                <span className="conv-main__status-icon">✔</span>
+                Complete
+              </button>
+              <button type="button" className="conv-main__icon-btn" aria-label="More options">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <circle cx="12" cy="5" r="1.5" />
+                  <circle cx="12" cy="12" r="1.5" />
+                  <circle cx="12" cy="19" r="1.5" />
+                </svg>
+              </button>
             </div>
           </header>
 
