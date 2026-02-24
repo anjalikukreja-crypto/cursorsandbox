@@ -7,7 +7,11 @@ export function Header() {
     <header className="analytics-header">
       <div className="analytics-header__left">
         <Link to="/" className="analytics-header__brand">
-          <span className="analytics-header__brand-text">Analytics</span>
+          <img
+            src="/eltropy-logo.png"
+            alt="Eltropy"
+            className="analytics-header__logo-img"
+          />
         </Link>
         <div className="analytics-header__aht">
           <span className="analytics-header__aht-label">AHT:</span>
