@@ -24,16 +24,10 @@
   flex-shrink: 0;
 }
 
-.analytics-header__brand:hover .analytics-header__logo-img {
-  opacity: 0.85;
-}
-
-.analytics-header__logo-img {
-  height: 36px;
-  width: auto;
-  display: block;
-  object-fit: contain;
-  transition: opacity 0.15s ease;
+.analytics-header__brand-text {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-heading);
 }
 
 .analytics-header__aht {
