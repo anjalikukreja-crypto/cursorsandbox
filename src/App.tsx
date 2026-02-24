@@ -7,6 +7,7 @@ import { Homepage } from './screens/Homepage/Homepage'
 import { AIAssistant } from './screens/AIAssistant/AIAssistant'
 import { TeamPerformance } from './screens/TeamPerformance/TeamPerformance'
 import { QualityIntelligence } from './screens/QualityIntelligence/QualityIntelligence'
+import { Conversations } from './screens/Conversations/Conversations'
 import { PlaceholderView } from './screens/PlaceholderView/PlaceholderView'
 import { Transition } from './screens/Transition/Transition'
 import { Reports } from './screens/Reports/Reports'
@@ -32,11 +33,11 @@ function App() {
         <Route path="ai-assistants" element={<PlaceholderView />} />
         <Route path="ai-agents" element={<PlaceholderView />} />
         <Route path="ai-intelligence" element={<PlaceholderView />} />
-        <Route path="conversations" element={<PlaceholderView />} />
-        <Route path="conversations/member-inbox" element={<PlaceholderView />} />
-        <Route path="conversations/interaction-list" element={<PlaceholderView />} />
-        <Route path="conversations/back-office" element={<PlaceholderView />} />
-        <Route path="conversations/live-dashboard" element={<PlaceholderView />} />
+        <Route path="conversations" element={<Conversations />} />
+        <Route path="conversations/member-inbox" element={<Conversations />} />
+        <Route path="conversations/interaction-list" element={<Conversations />} />
+        <Route path="conversations/back-office" element={<Conversations />} />
+        <Route path="conversations/live-dashboard" element={<Conversations />} />
         <Route path="conversations/video-notary-journal" element={<PlaceholderView />} />
         <Route path="branch-operations" element={<PlaceholderView />} />
         <Route path="branch-operations/appointments" element={<PlaceholderView />} />
