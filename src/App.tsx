@@ -37,6 +37,7 @@ function App() {
         <Route path="conversations/interaction-list" element={<PlaceholderView />} />
         <Route path="conversations/back-office" element={<PlaceholderView />} />
         <Route path="conversations/live-dashboard" element={<PlaceholderView />} />
+        <Route path="conversations/video-notary-journal" element={<PlaceholderView />} />
         <Route path="branch-operations" element={<PlaceholderView />} />
         <Route path="branch-operations/appointments" element={<PlaceholderView />} />
         <Route path="branch-operations/reputation-management" element={<PlaceholderView />} />
@@ -46,6 +47,9 @@ function App() {
         <Route path="analytics/my-team-performance" element={<TeamPerformance />} />
         <Route path="analytics/quality-intelligence" element={<QualityIntelligence />} />
         <Route path="analytics/reports" element={<Reports />} />
+        <Route path="analytics/conversation-insights" element={<PlaceholderView />} />
+        <Route path="analytics/secure-data-export" element={<PlaceholderView />} />
+        <Route path="analytics/check-register" element={<PlaceholderView />} />
         <Route path="marketing-campaigns" element={<PlaceholderView />} />
         <Route path="marketing-campaigns/text" element={<PlaceholderView />} />
         <Route path="marketing-campaigns/email" element={<PlaceholderView />} />
@@ -55,10 +59,14 @@ function App() {
         <Route path="knowledge-hub/ai-agent-knowledge" element={<PlaceholderView />} />
         <Route path="knowledge-hub/topics" element={<PlaceholderView />} />
         <Route path="support" element={<PlaceholderView />} />
+        <Route path="audit-log" element={<PlaceholderView />} />
         <Route path="submissions" element={<PlaceholderView />} />
         <Route path="activity" element={<PlaceholderView />} />
         <Route path="collateral-map" element={<PlaceholderView />} />
         <Route path="flows" element={<PlaceholderView />} />
+        <Route path="engagements" element={<PlaceholderView />} />
+        <Route path="engagements/call-flow" element={<PlaceholderView />} />
+        <Route path="engagements/workflows" element={<PlaceholderView />} />
         <Route path="all-apps" element={<PlaceholderView />} />
         <Route path="settings" element={<PlaceholderView />} />
       </Route>

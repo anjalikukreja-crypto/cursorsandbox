@@ -42,7 +42,12 @@ interface NavItem {
 }
 
 const navItems: NavItem[] = [
-  { id: 'home', path: '/homepage', label: 'Homepage', icon: HomeIcon },
+  {
+    id: 'ai-assistant',
+    path: '/ai-assistant',
+    label: 'AI assistant',
+    icon: AiAssistantIcon,
+  },
   {
     id: 'conversations',
     path: '/conversations',
@@ -51,32 +56,39 @@ const navItems: NavItem[] = [
     children: [
       { path: '/conversations/member-inbox', label: 'Member inbox' },
       { path: '/conversations/interaction-list', label: 'Interaction list' },
-      { path: '/conversations/back-office', label: 'Back office' },
       { path: '/conversations/live-dashboard', label: 'Live dashboard' },
-    ],
-  },
-  {
-    id: 'branch-operations',
-    path: '/branch-operations',
-    label: 'Branch operations',
-    icon: BranchIcon,
-    children: [
+      { path: '/conversations/video-notary-journal', label: 'Video notary journal' },
+      { path: '/conversations/back-office', label: 'Back office' },
       { path: '/branch-operations/appointments', label: 'Appointments' },
-      { path: '/branch-operations/reputation-management', label: 'Reputation management' },
       { path: '/branch-operations/lobby-management', label: 'Lobby management' },
     ],
   },
   {
-    id: 'analytics',
+    id: 'intelligence',
     path: '/analytics',
-    label: 'Analytics',
+    label: 'Intelligence',
     icon: AnalyticsIcon,
     tag: 'New',
     children: [
-      { path: '/analytics/my-dashboards', label: 'Business Intelligence' },
-      { path: '/analytics/quality-intelligence', label: 'Quality Intelligence' },
+      { path: '/analytics/my-dashboards', label: 'Business insights' },
+      { path: '/analytics/conversation-insights', label: 'Conversation insights' },
+      { path: '/analytics/secure-data-export', label: 'Secure data export' },
+      { path: '/analytics/check-register', label: 'Check register' },
+      { path: '/analytics/quality-intelligence', label: 'Quality insights' },
       { path: '/analytics/reports', label: 'Reports' },
     ],
+  },
+  {
+    id: 'audit-log',
+    path: '/audit-log',
+    label: 'Audit log',
+    icon: ActivityIcon,
+  },
+  {
+    id: 'ai-agents',
+    path: '/ai-agents',
+    label: 'AI agents',
+    icon: AiManagementIcon,
   },
   {
     id: 'marketing-campaigns',
@@ -98,6 +110,17 @@ const navItems: NavItem[] = [
       { path: '/knowledge-hub/modules', label: 'Modules' },
       { path: '/knowledge-hub/ai-agent-knowledge', label: 'AI agent knowledge' },
       { path: '/knowledge-hub/topics', label: 'Topics' },
+    ],
+  },
+  {
+    id: 'engagements',
+    path: '/engagements',
+    label: 'Engagements',
+    icon: ReputationIcon,
+    children: [
+      { path: '/engagements/call-flow', label: 'Call flow' },
+      { path: '/branch-operations/reputation-management', label: 'Reputation management' },
+      { path: '/engagements/workflows', label: 'Workflows' },
     ],
   },
 ]
