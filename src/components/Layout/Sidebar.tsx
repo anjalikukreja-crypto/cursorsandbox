@@ -124,7 +124,7 @@ function isChildActive(pathname: string, item: NavItem): boolean {
 }
 
 export function Sidebar() {
-  const [collapsed, setCollapsed] = useState(false)
+  const [collapsed, setCollapsed] = useState(true)
   const [expandedIds, setExpandedIds] = useState<Set<string>>(new Set())
   const location = useLocation()
   const isTransitionPage = location.pathname === '/transition' || location.pathname.startsWith('/transition/')
