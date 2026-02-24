@@ -1,28 +1,17 @@
 import { useState, useEffect } from 'react'
 import { NavLink, useLocation } from 'react-router-dom'
 import {
-  HomeIcon,
   ConversationsIcon,
-  BranchIcon,
   AnalyticsIcon,
   CampaignsIcon,
   KnowledgeIcon,
   ChevronDownIcon,
   ChevronLeftIcon,
   ChevronRightIcon,
-  LiveIcon,
   AiAssistantIcon,
   ReputationIcon,
-  AppointmentsIcon,
   AiManagementIcon,
-  ModulesIcon,
-  InsightsIcon,
-  ReportsIcon,
-  SubmissionsIcon,
   ActivityIcon,
-  CollateralMapIcon,
-  FlowsIcon,
-  HelpSupportIcon,
 } from './SidebarIcons'
 import './Sidebar.css'
 
