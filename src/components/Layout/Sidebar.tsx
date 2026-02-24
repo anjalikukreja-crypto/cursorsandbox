@@ -125,72 +125,9 @@ const navItems: NavItem[] = [
   },
 ]
 
-// Insights-style sidebar menu (used only on Transition page)
-const transitionNavItems: NavItem[] = [
-  { id: 'conversations', path: '/conversations', label: 'Conversations', icon: ConversationsIcon },
-  { id: 'ai-assistant', path: '/ai-assistant', label: 'AI Assistant', icon: AiAssistantIcon },
-  { id: 'reputation', path: '/branch-operations/reputation-management', label: 'Reputation Management', icon: ReputationIcon },
-  { id: 'live', path: '/conversations/live-dashboard', label: 'Live!', icon: LiveIcon },
-  { id: 'appointments', path: '/branch-operations/appointments', label: 'Appointments', icon: AppointmentsIcon },
-  {
-    id: 'ai-management',
-    path: '/ai-assistant',
-    label: 'AI Management',
-    icon: AiManagementIcon,
-    children: [
-      { path: '/ai-assistants', label: 'AI Assistants' },
-      { path: '/ai-agents', label: 'AI Agents' },
-      { path: '/ai-intelligence', label: 'AI Intelligence' },
-    ],
-  },
-  { id: 'modules', path: '/knowledge-hub/modules', label: 'Modules', icon: ModulesIcon },
-  { id: 'insights', path: '/transition', label: 'Insights', icon: InsightsIcon },
-  { id: 'business-intelligence', path: '/transition/business-intelligence', label: 'Business Intelligence', icon: AnalyticsIcon, tag: 'Alpha' },
-  { id: 'reports', path: '/analytics/reports', label: 'Reports', icon: ReportsIcon },
-  { id: 'submissions', path: '/submissions', label: 'Submissions', icon: SubmissionsIcon },
-  { id: 'activity', path: '/activity', label: 'Activity', icon: ActivityIcon },
-  { id: 'campaigns', path: '/marketing-campaigns', label: 'Campaigns', icon: CampaignsIcon },
-  { id: 'collateral-map', path: '/collateral-map', label: 'Collateral Map', icon: CollateralMapIcon },
-  { id: 'flows', path: '/flows', label: 'Flows', icon: FlowsIcon },
-  { id: 'help-support', path: '/support', label: 'Help & Support', icon: HelpSupportIcon },
-]
-
-// Beta phase: same structure as transition/insights sidebar (from reference image)
-const betaNavItems: NavItem[] = [
-  { id: 'conversations', path: '/conversations', label: 'Conversations', icon: ConversationsIcon },
-  { id: 'ai-assistant', path: '/ai-assistant', label: 'AI Assistant', icon: AiAssistantIcon },
-  { id: 'reputation', path: '/branch-operations/reputation-management', label: 'Reputation Management', icon: ReputationIcon },
-  { id: 'live', path: '/conversations/live-dashboard', label: 'Live!', icon: LiveIcon },
-  { id: 'appointments', path: '/branch-operations/appointments', label: 'Appointments', icon: AppointmentsIcon },
-  {
-    id: 'ai-management',
-    path: '/ai-assistant',
-    label: 'AI Management',
-    icon: AiManagementIcon,
-    children: [
-      { path: '/ai-assistants', label: 'AI Assistants' },
-      { path: '/ai-agents', label: 'AI Agents' },
-      { path: '/ai-intelligence', label: 'AI Intelligence' },
-    ],
-  },
-  { id: 'modules', path: '/knowledge-hub/modules', label: 'Modules', icon: ModulesIcon },
-  {
-    id: 'insights',
-    path: '/beta/business-intelligence',
-    label: 'Insights',
-    icon: InsightsIcon,
-    children: [
-      { path: '/beta/business-intelligence', label: 'Business Intelligence', tag: 'Alpha' },
-      { path: '/beta/quality-intelligence', label: 'Quality Intelligence' },
-    ],
-  },
-  { id: 'reports', path: '/analytics/reports', label: 'Reports', icon: ReportsIcon },
-  { id: 'submissions', path: '/submissions', label: 'Submissions', icon: SubmissionsIcon },
-  { id: 'activity', path: '/activity', label: 'Activity', icon: ActivityIcon },
-  { id: 'campaigns', path: '/marketing-campaigns', label: 'Campaigns', icon: CampaignsIcon },
-  { id: 'collateral-map', path: '/collateral-map', label: 'Collateral Map', icon: CollateralMapIcon },
-  { id: 'flows', path: '/flows', label: 'Flows', icon: FlowsIcon },
-]
+// Transition and Beta phases now reuse the same navigation structure
+const transitionNavItems: NavItem[] = navItems
+const betaNavItems: NavItem[] = navItems
 
 function isChildActive(pathname: string, item: NavItem): boolean {
   if (!item.children) return false
