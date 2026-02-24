@@ -39,6 +39,7 @@
 
 .radiant-sidebar__link:hover {
   background: rgba(255, 255, 255, 0.06);
+  color: #ffffff;
 }
 
 .radiant-sidebar__link--active {
@@ -57,6 +58,26 @@
 
 .radiant-sidebar__icon svg {
   flex-shrink: 0;
+}
+
+.radiant-sidebar__icon--ai svg {
+  color: #ffffff;
+  transition: transform 0.25s ease;
+}
+
+@keyframes ai-icon-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+}
+
+.radiant-sidebar__link:hover .radiant-sidebar__icon--ai svg,
+.radiant-sidebar__link--active .radiant-sidebar__icon--ai svg {
+  animation: ai-icon-pulse 1.6s ease-in-out infinite;
 }
 
 .radiant-sidebar__label {

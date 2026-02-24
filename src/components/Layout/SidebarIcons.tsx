@@ -30,10 +30,25 @@ export const AppointmentsIcon = () => (
 )
 
 export const AiAssistantIcon = () => (
-  <svg width={iconSize} height={iconSize} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <circle cx="12" cy="12" r="10" />
-    <path d="M12 8v4l2 2" />
-    <circle cx="12" cy="17" r="0.5" fill="currentColor" />
+  <svg
+    width={iconSize}
+    height={iconSize}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="1.7"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <path d="M12 2.5 5 6v8l7 3.5 7-3.5V6L12 2.5z" />
+    <path
+      d="M9 8.5h6l2 3.5-2 3.5H9l-2-3.5 2-3.5z"
+      fill="currentColor"
+      opacity="0.22"
+      stroke="none"
+    />
+    <path d="M9 8.5l6 7" strokeWidth={1.5} />
+    <path d="M15 8.5 9 15.5" strokeWidth={1.5} />
   </svg>
 )
 

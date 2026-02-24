@@ -165,6 +165,9 @@ export function Sidebar() {
             const hasChildren = item.children && item.children.length > 0
             const isExpanded = expandedIds.has(item.id)
             const hasActiveChild = hasChildren && (isChildActive(location.pathname, item) || location.pathname === item.path)
+            const iconClassName = `radiant-sidebar__icon${
+              item.id === 'ai-assistant' ? ' radiant-sidebar__icon--ai' : ''
+            }`
 
             if (hasChildren) {
               const firstChildPath = item.children![0].path
@@ -177,7 +180,7 @@ export function Sidebar() {
                         hasActiveChild ? 'radiant-sidebar__link--active' : ''
                       }`}
                     >
-                      <span className="radiant-sidebar__icon">
+                      <span className={iconClassName}>
                         <Icon />
                       </span>
                     </NavLink>
@@ -189,7 +192,7 @@ export function Sidebar() {
                       }`}
                       onClick={() => toggleExpand(item.id)}
                     >
-                    <span className="radiant-sidebar__icon">
+                    <span className={iconClassName}>
                       <Icon />
                     </span>
                     {!collapsed && (
@@ -240,7 +243,7 @@ export function Sidebar() {
                     `radiant-sidebar__link ${isActive ? 'radiant-sidebar__link--active' : ''}`
                   }
                 >
-                  <span className="radiant-sidebar__icon">
+                  <span className={iconClassName}>
                     <Icon />
                   </span>
                   {!collapsed && (
