@@ -382,6 +382,41 @@ export function QualityIntelligence() {
         )}
 
       </div>
+
+      <section className="quality-intelligence__wip">
+        <h2 className="quality-intelligence__wip-heading">Quality Intelligence is a work in progress</h2>
+        <div className="quality-intelligence__wip-illustration" aria-hidden>
+          <svg
+            className="quality-intelligence__wip-svg"
+            viewBox="0 0 260 200"
+            role="img"
+          >
+            <defs>
+              <linearGradient id="qiWipGround" x1="0" y1="1" x2="1" y2="1">
+                <stop offset="0%" stopColor="#F2F2FF" />
+                <stop offset="100%" stopColor="#E4E4F5" />
+              </linearGradient>
+            </defs>
+            <ellipse cx="130" cy="180" rx="110" ry="14" fill="url(#qiWipGround)" />
+
+            <rect x="40" y="70" width="180" height="16" rx="4" fill="#E4E4F5" />
+            <rect x="40" y="70" width="36" height="16" rx="4" fill="#C5C4F0" />
+            <rect x="88" y="70" width="36" height="16" rx="4" fill="#C5C4F0" />
+            <rect x="136" y="70" width="36" height="16" rx="4" fill="#C5C4F0" />
+            <rect x="184" y="70" width="36" height="16" rx="4" fill="#C5C4F0" />
+
+            <rect x="56" y="44" width="10" height="40" rx="4" fill="#E4E4F5" />
+            <rect x="194" y="44" width="10" height="40" rx="4" fill="#E4E4F5" />
+
+            <polygon points="122,140 138,140 154,180 106,180" fill="#DDDDF5" />
+            <polygon points="122,140 138,140 146,160 114,160" fill="#BEBDEB" />
+
+            <circle cx="67" cy="42" r="2" fill="#DDDDF5" />
+            <circle cx="200" cy="40" r="2.5" fill="#DDDDF5" />
+            <circle cx="180" cy="32" r="1.8" fill="#DDDDF5" />
+          </svg>
+        </div>
+      </section>
     </div>
   )
 }
